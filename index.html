@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Muhammad Moin Raza | Digital Strategist & Aviation Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#060A14;
+  --bg2:#0A1020;
+  --bg3:#0D1530;
+  --gold:#C9A356;
+  --gold2:#E8C97A;
+  --gold-dim:rgba(201,163,86,.14);
+  --white:#FFFFFF;
+  --g1:#D4DCE8;
+  --g2:#8A96A8;
+  --g3:#4A5568;
+  --border:rgba(255,255,255,.07);
+  --border-gold:rgba(201,163,86,.22);
+  --r:12px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--g1);overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 900px 700px at 85% 5%,rgba(201,163,86,.05) 0%,transparent 55%),
+  radial-gradient(ellipse 600px 500px at 5% 90%,rgba(13,21,48,.9) 0%,transparent 60%)}
+
+/* CURSOR */
+#cd{position:fixed;top:0;left:0;width:5px;height:5px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+#cr{position:fixed;top:0;left:0;width:32px;height:32px;border:1px solid rgba(201,163,86,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .2s}
+#cd.h{width:8px;height:8px;background:var(--gold2)}
+#cr.h{width:52px;height:52px;border-color:rgba(201,163,86,.7)}
+@media(pointer:coarse){#cd,#cr{display:none}body{cursor:auto}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 52px;display:flex;align-items:center;justify-content:space-between;transition:all .35s}
+nav.s{padding:14px 52px;background:rgba(6,10,20,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nl{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);text-decoration:none;letter-spacing:-.01em}
+.nl span{color:var(--gold)}
+.nm{display:flex;gap:28px;align-items:center}
+.nm a{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--g2);text-decoration:none;transition:color .2s;position:relative;padding-bottom:3px}
+.nm a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nm a:hover{color:var(--g1)}.nm a:hover::after{width:100%}
+.ncta{padding:9px 22px;border:1px solid var(--gold);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .2s}
+.ncta:hover{background:var(--gold);color:var(--bg)}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hbg span{width:22px;height:1.5px;background:var(--g2);transition:all .3s;display:block}
+@media(max-width:768px){nav{padding:14px 20px}.nm{display:none}.hbg{display:flex}nav.s{padding:10px 20px}}
+
+/* MOBILE MENU */
+#mob-menu{position:fixed;inset:0;background:rgba(6,10,20,.97);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .3s}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:700;color:var(--g1);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+#mob-menu a:hover{color:var(--gold)}
+#mob-close{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--g2);font-size:1.4rem;cursor:pointer}
+
+/* HERO */
+#hero{position:relative;z-index:2;min-height:100vh;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:100px 52px 60px;max-width:1320px;margin:0 auto}
+.h-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.h-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold)}
+h1.h-name{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,5rem);line-height:1.05;color:var(--white);letter-spacing:-.03em;margin-bottom:10px}
+h1.h-name em{font-style:italic;color:var(--gold)}
+.h-sub{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:500;color:var(--g2);letter-spacing:.05em;margin-bottom:20px}
+.h-desc{font-size:.9rem;line-height:1.85;color:var(--g2);max-width:480px;margin-bottom:32px}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn-g{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--gold);color:var(--bg);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:all .22s}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-g svg{width:14px;height:14px;transition:transform .2s}
+.btn-g:hover svg{transform:translateX(4px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border:1px solid var(--border-gold);color:var(--g2);font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:all .22s}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+.h-stats{display:grid;grid-template-columns:repeat(3,auto);gap:24px;padding-top:32px;border-top:1px solid var(--border)}
+.hs{text-align:left}
+.hs-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.8rem;color:var(--white);line-height:1}
+.hs-num span{color:var(--gold)}
+.hs-lbl{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--g3);margin-top:3px}
+
+/* HERO PHOTO */
+.h-photo{position:relative;display:flex;justify-content:center}
+.h-ring{position:absolute;width:380px;height:380px;border-radius:50%;border:1px solid var(--border-gold);animation:rspin 22s linear infinite;pointer-events:none}
+.h-ring2{position:absolute;width:310px;height:310px;border-radius:50%;border:1px dashed rgba(201,163,86,.12);animation:rspin 35s linear infinite reverse;pointer-events:none}
+@keyframes rspin{to{transform:rotate(360deg)}}
+.h-img{width:300px;height:380px;border-radius:16px;overflow:hidden;border:1px solid var(--border-gold);position:relative;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.h-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.h-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(6,10,20,.5) 0%,transparent 55%)}
+.h-badge{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);white-space:nowrap;background:rgba(6,10,20,.88);backdrop-filter:blur(10px);border:1px solid var(--border-gold);border-radius:50px;padding:7px 18px;font-size:.62rem;font-weight:600;letter-spacing:.08em;color:var(--gold);z-index:2}
+.h-fl{position:absolute;background:rgba(10,16,32,.92);border:1px solid var(--border);border-radius:8px;padding:9px 14px;font-size:.65rem;font-weight:600;white-space:nowrap;z-index:3;color:var(--g1)}
+.h-fl.t{top:32px;right:-16px;color:var(--gold)}
+.h-fl.b{bottom:80px;left:-20px}
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;padding:88px 20px 48px;gap:36px}
+  .h-photo{order:-1}.h-img{width:220px;height:280px}
+  .h-ring,.h-ring2{display:none}
+  .h-fl{display:none}
+  .h-stats{gap:16px}
+  .hs-num{font-size:1.4rem}
+}
+
+/* MARQUEE */
+.mq{position:relative;z-index:2;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0}
+.mq-track{display:flex;white-space:nowrap;animation:mq 28s linear infinite}
+.mq-track:hover{animation-play-state:paused}
+.mq-item{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(138,150,168,.38);padding:0 28px;display:inline-flex;align-items:center;gap:28px}
+.mq-item::after{content:'·';color:var(--gold);opacity:.5;font-size:.8rem}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.sw{position:relative;z-index:2;padding:72px 52px;max-width:1320px;margin:0 auto}
+.sw.alt{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sw.alt2{background:rgba(10,16,32,.6);border-top:1px solid var(--border)}
+.stag{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.stag::before{content:'';width:20px;height:1px;background:var(--gold)}
+.sh2{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.5vw,2.6rem);line-height:1.1;color:var(--white);letter-spacing:-.02em;margin-bottom:8px}
+.sh2 em{font-style:italic;color:var(--gold)}
+.ssub{font-size:.88rem;color:var(--g2);max-width:520px;line-height:1.7;margin-bottom:44px}
+@media(max-width:768px){.sw{padding:52px 20px}.ssub{margin-bottom:32px}}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rev.v{opacity:1;transform:translateY(0)}
+.rl{opacity:0;transform:translateX(-20px);transition:opacity .7s ease,transform .7s ease}
+.rl.v{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}
+
+/* ABOUT */
+.ag{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start}
+.at p{font-size:.9rem;line-height:1.9;color:var(--g2);margin-bottom:14px}
+.a-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.ac{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 13px;border-radius:2px;border:1px solid var(--border-gold);color:rgba(201,163,86,.7);transition:all .2s;cursor:default}
+.ac:hover{background:var(--gold-dim);color:var(--gold)}
+.a-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.am{padding:24px 20px;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:var(--r);position:relative;overflow:hidden;transition:all .3s;cursor:default}
+.am::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold),rgba(201,163,86,0));transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.am:hover{border-color:var(--border-gold);transform:translateY(-3px)}
+.am:hover::before{transform:scaleX(1)}
+.am-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;color:var(--white);line-height:1}
+.am-num span{color:var(--gold)}
+.am-d{font-size:.75rem;color:var(--g3);margin-top:6px;line-height:1.5}
+@media(max-width:900px){.ag{grid-template-columns:1fr;gap:40px}}
+
+/* COUNTRIES */
+.countries-wrap{margin-top:28px}
+.countries-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g3);margin-bottom:12px}
+.countries-list{display:flex;flex-wrap:wrap;gap:7px}
+.country{font-size:.65rem;font-weight:500;letter-spacing:.06em;padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--g2);transition:all .2s;cursor:default}
+.country:hover{border-color:var(--border-gold);color:var(--gold)}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:28px;margin-top:0}
+.tl::before{content:'';position:absolute;left:5px;top:10px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(201,163,86,.05))}
+.tli{position:relative;margin-bottom:40px;padding-left:28px}
+.tli:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:-29px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg2);border:1.5px solid var(--gold);transition:background .2s}
+.tli:hover .tl-dot{background:var(--gold)}
+.tl-yr{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.tl-t{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:2px}
+.tl-co{font-size:.75rem;font-weight:500;color:var(--g3);margin-bottom:10px;letter-spacing:.03em}
+.tl-pts{list-style:none;display:flex;flex-direction:column;gap:5px}
+.tl-pts li{font-size:.82rem;line-height:1.65;color:var(--g2);padding-left:14px;position:relative}
+.tl-pts li::before{content:'—';position:absolute;left:0;color:rgba(201,163,86,.5);font-size:.7rem}
+.tl-badge{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;border:1px solid var(--border-gold);color:var(--gold);margin-bottom:8px}
+
+/* SKILLS */
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.sk{background:rgba(255,255,255,.022);border:1px solid var(--border);border-radius:var(--r);padding:26px 22px;transition:all .3s;cursor:default}
+.sk:hover{border-color:var(--border-gold);background:var(--gold-dim);transform:translateY(-3px)}
+.sk-label{font-family:'Poppins',sans-serif;font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:10px}
+.sk-bar-bg{height:2px;background:rgba(255,255,255,.06);border-radius:1px;overflow:hidden;margin-bottom:14px}
+.sk-bar{height:100%;background:linear-gradient(to right,var(--gold),var(--gold2));border-radius:1px;width:0;transition:width 1.1s ease}
+.sk-tags{display:flex;flex-wrap:wrap;gap:5px}
+.st{font-size:.57rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:1px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--g3)}
+
+/* DASHBOARDS */
+.d-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.dsh{background:rgba(10,16,32,.9);border:1px solid rgba(201,163,86,.18);border-radius:var(--r);overflow:hidden;transition:all .3s}
+.dsh:hover{border-color:rgba(201,163,86,.45);box-shadow:0 8px 32px rgba(201,163,86,.06)}
+.dsh-hd{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dsh-ti{font-size:.75rem;font-weight:700;color:var(--white)}
+.dsh-st{font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 9px;border-radius:50px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);color:#34D399}
+.dsh-blur{font-size:.58rem;color:var(--g3);filter:blur(3.5px);user-select:none}
+.dsh-ms{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border)}
+.dm{padding:14px 12px;text-align:center;border-right:1px solid var(--border)}
+.dm:last-child{border-right:none}
+.dm-v{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.15rem;color:var(--white)}
+.dm-l{font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--g3);margin-top:3px}
+.dsh-roas{padding:14px 18px}
+.roas-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.roas-lbl{font-size:.68rem;color:var(--g2)}
+.roas-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:1rem}
+.roas-bg{height:5px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.roas-fill{height:100%;border-radius:3px;width:0;transition:width 1.3s ease}
+.dsh-ft{padding:12px 18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:.6rem;color:var(--g3)}
+.dsh-bm{display:flex;gap:18px}
+.dbv{font-size:.8rem;font-weight:700;color:var(--white)}
+.dbl{font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:var(--g3)}
+
+/* COLLAGE */
+.clg{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:140px;gap:10px;margin-top:28px}
+.ct{background:rgba(13,21,48,.9);border:1px solid var(--border);border-radius:10px;overflow:hidden;position:relative;cursor:pointer;transition:all .25s}
+.ct:hover{border-color:var(--border-gold);transform:scale(1.025);z-index:2}
+.ct:nth-child(1),.ct:nth-child(7),.ct:nth-child(13){grid-column:span 2}
+.ct:nth-child(4),.ct:nth-child(10){grid-row:span 2}
+.cti{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;position:relative}
+.ct-plt{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;padding:2px 9px;border-radius:50px;border:1px solid;display:inline-block}
+.ct-big{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.4rem;color:var(--white);line-height:1;margin-bottom:3px}
+.ct-lbl{font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(138,150,168,.5);margin-bottom:7px}
+.ct-blur{font-size:.55rem;color:var(--g3);filter:blur(3.5px);user-select:none;background:rgba(255,255,255,.03);padding:2px 8px;border-radius:3px;border:1px solid var(--border)}
+.ct-hover{position:absolute;inset:0;background:rgba(201,163,86,.08);opacity:0;transition:opacity .25s;display:flex;align-items:center;justify-content:center}
+.ct:hover .ct-hover{opacity:1}
+.ct-hover-t{font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:768px){.clg{grid-template-columns:repeat(3,1fr);grid-auto-rows:120px}.ct:nth-child(1),.ct:nth-child(7),.ct:nth-child(13){grid-column:span 1}.ct:nth-child(4),.ct:nth-child(10){grid-row:span 1}}
+
+/* PROJECTS */
+.ptabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:36px;overflow-x:auto}
+.ptab{padding:12px 24px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;color:var(--g3);border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;white-space:nowrap;transition:all .2s}
+.ptab:hover{color:var(--g1)}.ptab.a{color:var(--gold);border-bottom-color:var(--gold)}
+.pp{display:none}.pp.a{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.pc{background:rgba(255,255,255,.022);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .3s}
+.pc:hover{border-color:var(--border-gold);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.2)}
+.pc-hd{padding:20px 20px 14px;display:flex;gap:14px;align-items:flex-start}
+.pc-badge{display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 9px;border-radius:1px;margin-bottom:5px}
+.pc-t{font-family:'Poppins',sans-serif;font-weight:700;font-size:.9rem;color:var(--white);line-height:1.3}
+.pc-bd{padding:0 20px 20px;font-size:.82rem;line-height:1.7;color:var(--g2)}
+.pc-r{display:inline-block;margin-top:10px;font-size:.65rem;font-weight:600;color:var(--gold);background:var(--gold-dim);border:1px solid var(--border-gold);border-radius:2px;padding:3px 10px}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.cer{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:var(--r);padding:18px 16px;transition:all .22s;cursor:default}
+.cer:hover{border-color:var(--border-gold);background:var(--gold-dim)}
+.cer-i{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.cer-n{font-size:.82rem;font-weight:600;color:var(--white);line-height:1.3}
+
+/* TESTIMONIALS */
+.test-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border)}
+.tc{background:var(--bg2);padding:32px 28px;transition:background .3s}
+.tc:hover{background:rgba(13,21,48,.8)}
+.tc-q{font-size:.85rem;line-height:1.8;color:var(--g2);font-style:italic;margin-bottom:20px}
+.tc-aut{display:flex;align-items:center;gap:12px}
+.tc-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.72rem;flex-shrink:0}
+.tc-n{font-size:.8rem;font-weight:700;color:var(--white)}
+.tc-r{font-size:.68rem;color:var(--g3);margin-top:1px}
+
+/* CONTACT */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.ci h2{font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;color:var(--white);line-height:1.15;margin-bottom:16px}
+.ci h2 em{font-style:italic;color:var(--gold)}
+.ci p{font-size:.88rem;line-height:1.8;color:var(--g2);margin-bottom:28px}
+.cl-links{display:flex;flex-direction:column;gap:14px}
+.cl-link{display:flex;align-items:center;gap:12px;color:var(--g2);text-decoration:none;font-size:.85rem;transition:color .2s}
+.cl-link:hover{color:var(--gold)}
+.cl-ico{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;background:rgba(255,255,255,.025);transition:all .2s}
+.cl-link:hover .cl-ico{background:var(--gold-dim);border-color:var(--border-gold)}
+.cf{display:flex;flex-direction:column;gap:14px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fi label{display:block;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g3);margin-bottom:6px}
+.fi input,.fi textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.85rem;color:var(--white);outline:none;resize:none;transition:all .2s}
+.fi input:focus,.fi textarea:focus{border-color:var(--border-gold);background:var(--gold-dim)}
+.fi input::placeholder,.fi textarea::placeholder{color:var(--g3)}
+.f-sub{display:flex;align-items:center;gap:8px;padding:13px 28px;background:var(--gold);color:var(--bg);border:none;border-radius:2px;font-family:'Poppins',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s;width:fit-content}
+.f-sub:hover{background:var(--gold2);transform:translateY(-2px)}
+.f-ok{display:none;padding:12px;background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:8px;color:#34D399;font-size:.8rem;text-align:center}
+@media(max-width:768px){.cg{grid-template-columns:1fr;gap:40px}.fr{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{position:relative;z-index:2;padding:28px 52px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fl{font-family:'Poppins',sans-serif;font-weight:800;font-size:1rem;color:var(--g3)}
+.fl span{color:var(--gold)}
+.fc{font-size:.68rem;color:var(--g3)}
+.ft{font-size:.65rem;color:rgba(201,163,86,.45);font-style:italic}
+@media(max-width:768px){footer{padding:22px 20px;flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<div id="cd"></div><div id="cr"></div>
+
+<!-- Mobile menu -->
+<div id="mob-menu">
+  <button id="mob-close">✕</button>
+  <a href="#about" class="mob-a">About</a>
+  <a href="#journey" class="mob-a">Journey</a>
+  <a href="#skills" class="mob-a">Skills</a>
+  <a href="#ads" class="mob-a">Ad Results</a>
+  <a href="#work" class="mob-a">Portfolio</a>
+  <a href="#contact" class="mob-a">Contact</a>
+</div>
+
+<nav id="nav">
+  <a href="#" class="nl">M.<span>Moin Raza</span></a>
+  <div class="nm">
+    <a href="#about">About</a><a href="#journey">Journey</a>
+    <a href="#skills">Skills</a><a href="#ads">Ad Results</a>
+    <a href="#work">Portfolio</a><a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <a href="#contact" class="ncta">Let's Connect</a>
+    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="position:relative;z-index:2">
+  <div>
+    <p class="h-eyebrow rev">Digital Strategist · Aviation Professional</p>
+    <h1 class="h-name rev d1">Muhammad<br><em>Moin Raza</em></h1>
+    <p class="h-sub rev d2">— Piloting your journey to digital success</p>
+    <p class="h-desc rev d3">IATA-certified Airline Marketing professional with 5+ years bridging digital advertising and premium aviation hospitality. Founder of Marketus Marshal LLC. Based in Doha, Qatar.</p>
+    <div class="h-btns rev d4">
+      <a href="#work" class="btn-g">Explore Work <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg></a>
+      <a href="#contact" class="btn-o">Get in Touch</a>
+    </div>
+    <div class="h-stats rev d5">
+      <div class="hs"><div class="hs-num"><span class="cv" data-t="290">0</span><span>%</span></div><div class="hs-lbl">Peak ROAS</div></div>
+      <div class="hs"><div class="hs-num"><span class="cv" data-t="100">0</span><span>+</span></div><div class="hs-lbl">Projects Delivered</div></div>
+      <div class="hs"><div class="hs-num"><span class="cv" data-t="20">0</span><span></span></div><div class="hs-lbl">Countries Visited</div></div>
+    </div>
+  </div>
+  <div class="h-photo rl d3">
+    <div class="h-ring"></div>
+    <div class="h-ring2"></div>
+    <div class="h-img">
+      <img src="moinwebsite.svg" alt="Muhammad Moin Raza"/>
+    </div>
+    <div class="h-badge">Doha, Qatar · Open to Relocation</div>
+    <div class="h-fl t">290% ROAS Delivered</div>
+    <div class="h-fl b">Qatar Airways · 90 Initiatives</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" style="position:relative;z-index:2">
+  <div class="mq-track">
+    <span class="mq-item">Digital Marketing</span><span class="mq-item">Meta Advertising</span><span class="mq-item">Google Ads</span><span class="mq-item">IATA Certified</span><span class="mq-item">Aviation Operations</span><span class="mq-item">Customer Experience</span><span class="mq-item">Front of House Operations</span><span class="mq-item">B2B Lead Generation</span><span class="mq-item">Project Management</span><span class="mq-item">Data Analytics</span><span class="mq-item">Content Strategy</span><span class="mq-item">Qatar Airways</span><span class="mq-item">LinkedIn Ads</span><span class="mq-item">Snapchat Marketing</span><span class="mq-item">AI Automation</span>
+    <span class="mq-item">Digital Marketing</span><span class="mq-item">Meta Advertising</span><span class="mq-item">Google Ads</span><span class="mq-item">IATA Certified</span><span class="mq-item">Aviation Operations</span><span class="mq-item">Customer Experience</span><span class="mq-item">Front of House Operations</span><span class="mq-item">B2B Lead Generation</span><span class="mq-item">Project Management</span><span class="mq-item">Data Analytics</span><span class="mq-item">Content Strategy</span><span class="mq-item">Qatar Airways</span><span class="mq-item">LinkedIn Ads</span><span class="mq-item">Snapchat Marketing</span><span class="mq-item">AI Automation</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="sw">
+  <div class="ag">
+    <div>
+      <p class="stag rev">Professional Profile</p>
+      <h2 class="sh2 rev d1">Where Aviation Meets<br><em>Digital Excellence</em></h2>
+      <div class="at rev d2">
+        <p>Passionate about the intersection of marketing and aviation, I bring over 5 years of extensive involvement in marketing, enriched through diverse roles and continuous learning experiences. My journey includes earning a Diploma in Airline Marketing from IATA, complemented by certifications in Social Media Marketing, LinkedIn and Snapchat Marketing, and various LinkedIn courses on customer experience and leadership.</p>
+        <p>With a background in customer care, front-of-house operations, and strategic marketing insights, I am committed to enhancing customer experiences and fostering brand engagement across various industries. As a member of professional societies and a volunteer in community initiatives, I actively contribute to fostering positive relationships and driving impactful change.</p>
+        <p>Let's connect to explore how my diverse skill set and passion for marketing can contribute to your organization's success. Whether in aviation or beyond, I am eager to collaborate on innovative projects and initiatives that drive mutual growth and excellence.</p>
+      </div>
+      <div class="a-chips rev d3">
+        <span class="ac">IATA Airline Marketing Diploma</span>
+        <span class="ac">Google Ads Certified</span>
+        <span class="ac">LinkedIn Marketing</span>
+        <span class="ac">Snapchat Marketing</span>
+        <span class="ac">HubSpot Certified</span>
+        <span class="ac">Salesforce Social Studio</span>
+        <span class="ac">GDPR Compliant</span>
+        <span class="ac">Power BI · Tableau</span>
+        <span class="ac">English · Urdu · Punjabi</span>
+        <span class="ac">Learning Spanish</span>
+      </div>
+    </div>
+    <div class="a-metrics rev d2">
+      <div class="am"><div class="am-num"><span class="cv" data-t="290">0</span><span>%</span></div><div class="am-d">Peak ROAS on Meta campaigns over 3 months</div></div>
+      <div class="am"><div class="am-num"><span class="cv" data-t="100">0</span><span>+</span></div><div class="am-d">Marketing &amp; aviation projects delivered</div></div>
+      <div class="am"><div class="am-num"><span class="cv" data-t="90">0</span></div><div class="am-d">Structured initiatives in 120 working days at QA</div></div>
+      <div class="am"><div class="am-num"><span class="cv" data-t="300">0</span><span>+</span></div><div class="am-d">UGC submissions from a single brand contest</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- JOURNEY -->
+<div id="journey" class="sw alt">
+  <p class="stag rev">Career Timeline</p>
+  <h2 class="sh2 rev d1">A Journey of <em>Purpose & Growth</em></h2>
+  <p class="ssub rev d2">From social media coordinator to VP-level project contributor — building dual mastery across two distinct disciplines.</p>
+  <div class="tl">
+    <div class="tli rev">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">2022 — Present</div>
+      <div class="tl-badge">Digital Agency</div>
+      <div class="tl-t">Founder & Brand Architect</div>
+      <div class="tl-co">Marketus Marshal LLC</div>
+      <ul class="tl-pts">
+        <li>Built and scaled a full-service digital agency delivering Meta, Google, and LinkedIn ad campaigns across USA, Pakistan, Spain, UK, and Canada</li>
+        <li>Achieved 290% ROAS for e-commerce client and 40% CPA reduction for travel agency within 3 months</li>
+        <li>Managed $5,000+ ad budgets with 190% ROAS for Canadian fintech client; generated 300+ UGC submissions for retail brand campaign</li>
+        <li>Delivered LinkedIn B2B pipeline strategies driving 15% qualified inquiry uplift and 35% reply rates for SaaS clients</li>
+        <li>Offer full-suite services: PPC, social media, AI automation, Snapchat lens creation, web development, and content strategy</li>
+      </ul>
+    </div>
+    <div class="tli rev d1">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">Sep 2022 — Present</div>
+      <div class="tl-badge">Aviation · Hospitality</div>
+      <div class="tl-t">Senior Lounge Attendant — Front of House</div>
+      <div class="tl-co">Qatar Airways · Hamad International Airport, Doha</div>
+      <ul class="tl-pts">
+        <li>Delivered 5-star premium hospitality to Business and First Class passengers across 16 HIA lounges including Al Safwa and Al Maha</li>
+        <li>In Q4 2025, appointed to strategic office functions due to demonstrated technical and digital capabilities — delivered 90 structured initiatives and projects within approximately 120 working days</li>
+        <li>Developed frontline team video achieving 25,000+ views on QHUB on launch day; team building event video garnering 900+ views</li>
+        <li>Created QMATE interactive HTML prototype supporting lounge digital transformation aligned with IATA Net Zero 2050</li>
+        <li>Designed Spa Therapist Excel dashboard for real-time KPI tracking; conducted VP-level competitor analysis on SIA and Cathay Pacific</li>
+        <li>Authored and published Safety SOP after identifying electrical hazard; launched "Flavor IQ" culinary assessment testing 396 staff</li>
+      </ul>
+    </div>
+    <div class="tli rev d2">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">2021 — 2022</div>
+      <div class="tl-badge">Social Media</div>
+      <div class="tl-t">Social Media Marketing Manager — Middle East</div>
+      <div class="tl-co">Cinematic Marshal · Pakistan</div>
+      <ul class="tl-pts">
+        <li>Directed team of 5 across B2B and B2C campaigns; leveraged LinkedIn targeting for 15% qualified inquiry increase</li>
+        <li>Launched UGC contest generating 300+ submissions and measurable 10% brand loyalty uplift</li>
+      </ul>
+    </div>
+    <div class="tli rev d3">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">Jul 2020 — Feb 2021</div>
+      <div class="tl-badge">Paid Social</div>
+      <div class="tl-t">Social Media Specialist</div>
+      <div class="tl-co">Liberer Merchant Services · Canada</div>
+      <ul class="tl-pts">
+        <li>Managed $5,000 paid social budget achieving 190% ROAS and 10% lead generation increase for Canadian fintech firm</li>
+      </ul>
+    </div>
+    <div class="tli rev d4">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">May 2019 — Jun 2020</div>
+      <div class="tl-badge">Multi-Market</div>
+      <div class="tl-t">Social Media Marketing Officer (Remote)</div>
+      <div class="tl-co">Business Workforce Solutions · UK</div>
+      <ul class="tl-pts">
+        <li>Introduced targeted campaigns achieving 30% website traffic increase and 20% follower growth in 6 months; won "Outstanding Social Media Impact" award</li>
+      </ul>
+    </div>
+    <div class="tli rev d5">
+      <div class="tl-dot"></div>
+      <div class="tl-yr">2018 — 2022 (Concurrent)</div>
+      <div class="tl-badge">Education</div>
+      <div class="tl-t">BS Aviation Management</div>
+      <div class="tl-co">University of Management and Technology · Lahore (Studied alongside full-time work)</div>
+      <ul class="tl-pts">
+        <li>Specialized in Airline Marketing Management, Aviation Safety, and Flight Operations; General Secretary of Aviation Club UMT</li>
+        <li>Final project: Created Sustainable Aviation Fuel from Tobacco — pitched to Pakistan Civil Aviation Authority</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="sw">
+  <p class="stag rev">Core Competencies</p>
+  <h2 class="sh2 rev d1">Technical <em>Expertise</em></h2>
+  <p class="ssub rev d2">A dual-discipline toolkit built across digital marketing, aviation operations, and data analytics.</p>
+  <div class="sk-grid">
+    <div class="sk rev"><div class="sk-label">Paid Media Strategy</div><div class="sk-bar-bg"><div class="sk-bar" data-w="92"></div></div><div class="sk-tags"><span class="st">Meta Ads</span><span class="st">Google Ads</span><span class="st">LinkedIn Ads</span><span class="st">A/B Testing</span><span class="st">Retargeting</span></div></div>
+    <div class="sk rev d1"><div class="sk-label">Analytics & Reporting</div><div class="sk-bar-bg"><div class="sk-bar" data-w="88"></div></div><div class="sk-tags"><span class="st">GA4</span><span class="st">Power BI</span><span class="st">Tableau</span><span class="st">Excel Dashboards</span></div></div>
+    <div class="sk rev d2"><div class="sk-label">Social Media Marketing</div><div class="sk-bar-bg"><div class="sk-bar" data-w="90"></div></div><div class="sk-tags"><span class="st">Snapchat</span><span class="st">LinkedIn</span><span class="st">Meta</span><span class="st">Hootsuite</span><span class="st">Sprout Social</span></div></div>
+    <div class="sk rev d3"><div class="sk-label">Front of House Operations</div><div class="sk-bar-bg"><div class="sk-bar" data-w="93"></div></div><div class="sk-tags"><span class="st">Premium CX</span><span class="st">VIP Handling</span><span class="st">OTP Management</span><span class="st">5-Star Service</span></div></div>
+    <div class="sk rev d4"><div class="sk-label">Aviation Operations</div><div class="sk-bar-bg"><div class="sk-bar" data-w="89"></div></div><div class="sk-tags"><span class="st">IATA Standards</span><span class="st">SOP Writing</span><span class="st">GDPR</span><span class="st">Training Design</span></div></div>
+    <div class="sk rev d5"><div class="sk-label">Project Management</div><div class="sk-bar-bg"><div class="sk-bar" data-w="86"></div></div><div class="sk-tags"><span class="st">SharePoint</span><span class="st">MS Forms</span><span class="st">Budget Mgmt</span><span class="st">KPI Tracking</span></div></div>
+    <div class="sk rev"><div class="sk-label">B2B Lead Generation</div><div class="sk-bar-bg"><div class="sk-bar" data-w="85"></div></div><div class="sk-tags"><span class="st">LinkedIn Sales Nav</span><span class="st">HubSpot</span><span class="st">Salesforce</span></div></div>
+    <div class="sk rev d1"><div class="sk-label">Content & Brand Design</div><div class="sk-bar-bg"><div class="sk-bar" data-w="83"></div></div><div class="sk-tags"><span class="st">UGC Strategy</span><span class="st">Video Editing</span><span class="st">Copywriting</span><span class="st">Photography</span></div></div>
+    <div class="sk rev d2"><div class="sk-label">AI & Automation</div><div class="sk-bar-bg"><div class="sk-bar" data-w="80"></div></div><div class="sk-tags"><span class="st">AI Chatbots</span><span class="st">Workflow Automation</span><span class="st">Digital Products</span></div></div>
+  </div>
+</div>
+
+<!-- AD DASHBOARDS -->
+<div id="ads" class="sw alt">
+  <p class="stag rev">Performance Proof</p>
+  <h2 class="sh2 rev d1">Live Ad Campaign <em>Dashboards</em></h2>
+  <p class="ssub rev d2">Real results across international markets. Client identifiers blurred for confidentiality.</p>
+  <div class="d-grid">
+    <!-- Google USA -->
+    <div class="dsh rev">
+      <div class="dsh-hd">
+        <div><div class="dsh-ti">Google Ads — USA Client</div><div class="dsh-blur" style="margin-top:3px">Acct: XX-XXX-XXXX · Client: █████████</div></div>
+        <div class="dsh-st">Active</div>
+      </div>
+      <div class="dsh-ms">
+        <div class="dm"><div class="dm-v">145K</div><div class="dm-l">Impressions</div></div>
+        <div class="dm"><div class="dm-v">4.2K</div><div class="dm-l">Clicks</div></div>
+        <div class="dm"><div class="dm-v">85</div><div class="dm-l">Conversions</div></div>
+      </div>
+      <div class="dsh-roas">
+        <div class="roas-row"><span class="roas-lbl">Return on Ad Spend</span><span class="roas-num" style="color:#34D399">~290%</span></div>
+        <div class="roas-bg"><div class="roas-fill" data-w="82" style="background:linear-gradient(to right,#34D399,#059669)"></div></div>
+      </div>
+      <div class="dsh-ft">
+        <div class="dsh-bm">
+          <div><div class="dbv">$2,450</div><div class="dbl">Spend</div></div>
+          <div><div class="dbv" style="color:#34D399">$7,100</div><div class="dbl">Revenue</div></div>
+          <div><div class="dbv">2.9%</div><div class="dbl">CVR</div></div>
+        </div>
+        <span>USD · Search</span>
+      </div>
+    </div>
+    <!-- Meta Pakistan -->
+    <div class="dsh rev d1">
+      <div class="dsh-hd">
+        <div><div class="dsh-ti">Meta Ads — Pakistani Client</div><div class="dsh-blur" style="margin-top:3px">Acct: █████████ · Client: ████████ Pvt Ltd</div></div>
+        <div class="dsh-st">Active</div>
+      </div>
+      <div class="dsh-ms">
+        <div class="dm"><div class="dm-v">500K</div><div class="dm-l">Impressions</div></div>
+        <div class="dm"><div class="dm-v">12K</div><div class="dm-l">Link Clicks</div></div>
+        <div class="dm"><div class="dm-v">210</div><div class="dm-l">Conversions</div></div>
+      </div>
+      <div class="dsh-roas">
+        <div class="roas-row"><span class="roas-lbl">Return on Ad Spend</span><span class="roas-num" style="color:#C9A356">~450%</span></div>
+        <div class="roas-bg"><div class="roas-fill" data-w="89" style="background:linear-gradient(to right,#C9A356,#E8C97A)"></div></div>
+      </div>
+      <div class="dsh-ft">
+        <div class="dsh-bm">
+          <div><div class="dbv">₨150K</div><div class="dbl">Spend</div></div>
+          <div><div class="dbv" style="color:#C9A356">₨675K</div><div class="dbl">Revenue</div></div>
+          <div><div class="dbv">1.75%</div><div class="dbl">CVR</div></div>
+        </div>
+        <span>PKR · Feed + Stories</span>
+      </div>
+    </div>
+    <!-- LinkedIn Spain -->
+    <div class="dsh rev d2">
+      <div class="dsh-hd">
+        <div><div class="dsh-ti">LinkedIn Ads — Spanish Client</div><div class="dsh-blur" style="margin-top:3px">Acct: ██████████ · Client: ████████ S.L.</div></div>
+        <div class="dsh-st">Active</div>
+      </div>
+      <div class="dsh-ms">
+        <div class="dm"><div class="dm-v">75K</div><div class="dm-l">Impressions</div></div>
+        <div class="dm"><div class="dm-v">1.8K</div><div class="dm-l">Clicks</div></div>
+        <div class="dm"><div class="dm-v">25</div><div class="dm-l">Leads</div></div>
+      </div>
+      <div class="dsh-roas">
+        <div class="roas-row"><span class="roas-lbl">Return on Ad Spend</span><span class="roas-num" style="color:#818CF8">~405%</span></div>
+        <div class="roas-bg"><div class="roas-fill" data-w="75" style="background:linear-gradient(to right,#818CF8,#6366F1)"></div></div>
+      </div>
+      <div class="dsh-ft">
+        <div class="dsh-bm">
+          <div><div class="dbv">€1,850</div><div class="dbl">Spend</div></div>
+          <div><div class="dbv" style="color:#818CF8">€7,500</div><div class="dbl">Pipeline</div></div>
+          <div><div class="dbv">1.39%</div><div class="dbl">CTR</div></div>
+        </div>
+        <span>EUR · B2B Lead Gen</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLAGE -->
+  <div class="rev" style="margin-top:48px">
+    <p style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g3);margin-bottom:6px">Ad Account Performance Gallery</p>
+    <p style="font-size:.82rem;color:var(--g3);margin-bottom:0">Multi-platform results across markets. Account names and IDs blurred for client confidentiality.</p>
+    <div class="clg">
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#060e1a,#0a1628)"><div class="ct-plt" style="color:#34D399;border-color:rgba(52,211,153,.3)">Google Ads</div><div class="ct-big">290%</div><div class="ct-lbl">ROAS · USA</div><div class="ct-blur">Acct: XX-XXX-XXXX</div></div><div class="ct-hover"><div class="ct-hover-t">Search Campaign</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#0a1020,#0d1832)"><div class="ct-plt" style="color:#C9A356;border-color:rgba(201,163,86,.3)">Meta</div><div class="ct-big">500K</div><div class="ct-lbl">Impressions · PKR</div><div class="ct-blur">ID: ████████████</div></div><div class="ct-hover"><div class="ct-hover-t">Feed + Stories</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#080c1e,#0d1530)"><div class="ct-plt" style="color:#818CF8;border-color:rgba(129,140,248,.3)">LinkedIn</div><div class="ct-big">€7.5K</div><div class="ct-lbl">Pipeline · Spain</div><div class="ct-blur">Client: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">B2B Lead Gen</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#0c1020,#101830);height:100%"><div class="ct-plt" style="color:#A78BFA;border-color:rgba(167,139,250,.3)">Meta</div><div class="ct-big">190%</div><div class="ct-lbl">ROAS · Canada</div><div class="ct-big" style="font-size:.95rem;color:#A78BFA;margin-top:8px">$5K Budget</div><div class="ct-blur" style="margin-top:8px">ID: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">CAD Fintech</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#061010,#0a1a1a)"><div class="ct-plt" style="color:#2DD4BF;border-color:rgba(45,212,191,.3)">Google</div><div class="ct-big">4.2K</div><div class="ct-lbl">Clicks · USA</div><div class="ct-blur">Acct: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">Search Traffic</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#140a10,#200d18)"><div class="ct-plt" style="color:#F472B6;border-color:rgba(244,114,182,.3)">Meta</div><div class="ct-big">+30%</div><div class="ct-lbl">Traffic · UK</div><div class="ct-blur">Client: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">Traffic Campaign</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#060e10,#081618)"><div class="ct-plt" style="color:#34D399;border-color:rgba(52,211,153,.3)">Meta</div><div class="ct-big">300+</div><div class="ct-lbl">UGC Submissions</div><div class="ct-blur">Brand: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">UGC Contest</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#100a0a,#201010)"><div class="ct-plt" style="color:#FCA5A5;border-color:rgba(252,165,165,.3)">Google</div><div class="ct-big">85</div><div class="ct-lbl">Conversions</div><div class="ct-blur">Campaign: ██████</div></div><div class="ct-hover"><div class="ct-hover-t">Conversion</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#0a0e10,#0c1618);height:100%"><div class="ct-plt" style="color:#2DD4BF;border-color:rgba(45,212,191,.3)">LinkedIn</div><div class="ct-big">15%</div><div class="ct-lbl">Inquiry Uplift</div><div class="ct-big" style="font-size:.95rem;color:#2DD4BF;margin-top:8px">35%</div><div class="ct-lbl" style="font-size:.5rem">Reply Rate</div><div class="ct-blur" style="margin-top:8px">Client: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">B2B Outreach</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#0e0a18,#160d28)"><div class="ct-plt" style="color:#818CF8;border-color:rgba(129,140,248,.3)">Meta</div><div class="ct-big">+17%</div><div class="ct-lbl">Engagement</div><div class="ct-blur">ID: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">Engagement</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#060c18,#0a1225)"><div class="ct-plt" style="color:#93C5FD;border-color:rgba(147,197,253,.3)">Google</div><div class="ct-big">-40%</div><div class="ct-lbl">CPA · Travel</div><div class="ct-blur">Client: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">Cost Reduction</div></div></div>
+      <div class="ct"><div class="cti" style="background:linear-gradient(135deg,#080e18,#0c1628)"><div class="ct-plt" style="color:#C9A356;border-color:rgba(201,163,86,.3)">Meta</div><div class="ct-big">+20%</div><div class="ct-lbl">Followers · UK</div><div class="ct-blur">Page: ████████</div></div><div class="ct-hover"><div class="ct-hover-t">Growth Campaign</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="work" class="sw">
+  <p class="stag rev">Selected Work</p>
+  <h2 class="sh2 rev d1">Portfolio of <em>Projects</em></h2>
+  <p class="ssub rev d2">100+ marketing and aviation projects delivered. A curated selection across both disciplines.</p>
+  <div class="ptabs rev d3">
+    <button class="ptab a" data-tab="digital">Marketus Marshal · Digital</button>
+    <button class="ptab" data-tab="aviation">Qatar Airways · Operations</button>
+  </div>
+  <!-- DIGITAL -->
+  <div class="pp a" id="ptab-digital">
+    <div class="pc rev">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#34D399;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2)">Meta · Google · Multi-Market</div><div class="pc-t">ROAS Acceleration Campaigns</div></div>
+      </div>
+      <div class="pc-bd">Restructured ad architecture across USA, Pakistan, and Spain markets — implementing custom audience funnels, dynamic creatives, and retargeting. Scaled ROAS from sub-100% to 290%+ within 3 months.
+      <div class="pc-r">290% ROAS · $7,100 Revenue · 85 Conversions</div></div>
+    </div>
+    <div class="pc rev d1">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#818CF8;background:rgba(129,140,248,.08);border:1px solid rgba(129,140,248,.2)">LinkedIn · B2B Strategy</div><div class="pc-t">B2B Lead Generation Pipeline</div></div>
+      </div>
+      <div class="pc-bd">Built LinkedIn outreach and content strategy for B2B clients, reaching decision-makers and generating 15% qualified inquiry uplift with 35% reply rates. Opened executive-level doors for SaaS and professional service clients.
+      <div class="pc-r">+15% Inquiries · 35% Reply Rate</div></div>
+    </div>
+    <div class="pc rev d2">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#C9A356;background:rgba(201,163,86,.08);border:1px solid rgba(201,163,86,.2)">Content Strategy · UGC</div><div class="pc-t">UGC Brand Loyalty Contest</div></div>
+      </div>
+      <div class="pc-bd">Designed and launched a UGC contest generating 300+ audience submissions. Resulted in measurable 10% brand loyalty increase and significant growth in organic brand advocates.
+      <div class="pc-r">300+ Submissions · +10% Brand Loyalty</div></div>
+    </div>
+    <div class="pc rev d3">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#A78BFA;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2)">Paid Social · Canada</div><div class="pc-t">Canadian Fintech Campaign</div></div>
+      </div>
+      <div class="pc-bd">Managed $5,000 social budget for Liberer Merchant Services (Canada), achieving 190% ROAS, 10% lead generation increase, and 5% organic reach growth. Mentored junior team members.
+      <div class="pc-r">190% ROAS · $5K Budget · +10% Leads</div></div>
+    </div>
+    <div class="pc rev d4">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#2DD4BF;background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.2)">Google Ads · Travel</div><div class="pc-t">Travel Agency CPA Optimization</div></div>
+      </div>
+      <div class="pc-bd">Rebuilt Google Ads account structure using SKAG methodology, refined bidding strategies, and aligned landing pages — achieving 40% reduction in Cost Per Acquisition for tourism sector client.
+      <div class="pc-r">-40% CPA · 2.8x Conversion Lift</div></div>
+    </div>
+    <div class="pc rev d5">
+      <div class="pc-hd">
+        <div><div class="pc-badge" style="color:#F472B6;background:rgba(244,114,182,.08);border:1px solid rgba(244,114,182,.2)">Multi-Platform · UK</div><div class="pc-t">UK Business Growth Campaign</div></div>
+      </div>
+      <div class="pc-bd">For Business Workforce Solutions (UK), introduced campaigns achieving 30% traffic increase and 20% follower growth in 6 months. Won "Outstanding Social Media Impact" award for 20% referral traffic uplift.
+      <div class="pc-r">+30% Traffic · +20% Followers · Award</div></div>
+    </div>
+  </div>
+  <!-- AVIATION -->
+  <div class="pp" id="ptab-aviation">
+    <div class="pc rev">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#34D399;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2)">Digital Transformation</div><div class="pc-t">QMATE Digital Lounge Model</div></div></div>
+      <div class="pc-bd">Developed interactive HTML prototype for QMATE — converting all lounge paper operations to digital. Aligned with IATA Net Zero 2050 goals. Presented dynamic webpage to management showing all active digital structures required across lounge locations.<div class="pc-r">Paperless Vision · IATA Net Zero Aligned</div></div>
+    </div>
+    <div class="pc rev d1">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#C9A356;background:rgba(201,163,86,.08);border:1px solid rgba(201,163,86,.2)">Video Production</div><div class="pc-t">Frontline Team Video — 25K Views</div></div></div>
+      <div class="pc-bd">Conceived, shot, and edited frontline team video showcasing Qatar Airways lounge staff. Published on QHUB internal platform, it garnered 25,000+ views on launch day, boosting team morale and internal brand pride.<div class="pc-r">25,000+ Views on Launch Day</div></div>
+    </div>
+    <div class="pc rev d2">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#818CF8;background:rgba(129,140,248,.08);border:1px solid rgba(129,140,248,.2)">Data Analytics</div><div class="pc-t">Spa Therapist Performance Dashboard</div></div></div>
+      <div class="pc-bd">Designed Excel dynamic dashboard tracking spa therapist performance against daily targets in real-time. Enabled management to make evidence-based staffing decisions and improved measurable team efficiency.<div class="pc-r">Real-Time KPI Tracking · +18% Efficiency</div></div>
+    </div>
+    <div class="pc rev d3">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#2DD4BF;background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.2)">Training Content</div><div class="pc-t">Menu Cycle 4 — 196 Dishes Photographed</div></div></div>
+      <div class="pc-bd">Built complete Menu Cycle 4 training presentation for all 16 premium and non-premium lounges. Photographed all 196 menu dishes to create the definitive onboarding standard used by all lounge trainers.<div class="pc-r">196 Dishes · 16 Lounges · Standard Training</div></div>
+    </div>
+    <div class="pc rev d4">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#FCA5A5;background:rgba(252,165,165,.08);border:1px solid rgba(252,165,165,.2)">Strategic Analysis</div><div class="pc-t">Competitor Lounge Analysis — VP Level</div></div></div>
+      <div class="pc-bd">Benchmarked Singapore Airlines and Cathay Pacific lounge offerings covering facilities, access, service levels, and cost-per-pax. Delivered VP-level actionable insights on competitive positioning for HIA lounges.<div class="pc-r">VP-Level Deliverable · SIA & CX Benchmarked</div></div>
+    </div>
+    <div class="pc rev d5">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#C9A356;background:rgba(201,163,86,.08);border:1px solid rgba(201,163,86,.2)">Assessment System</div><div class="pc-t">The Flavor IQ — 396 Staff Assessed</div></div></div>
+      <div class="pc-bd">Designed and launched culinary assessment system from scratch using MS Forms, testing all menu items. Successfully assessed 396 staff members — the first-ever structured culinary competency framework in the lounges.<div class="pc-r">396 Staff Assessed · First-Ever Framework</div></div>
+    </div>
+    <div class="pc rev">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#E8C97A;background:rgba(232,201,122,.08);border:1px solid rgba(232,201,122,.2)">IATA Marketing</div><div class="pc-t">Outstation Lounge Bid — VP ThankQ</div></div></div>
+      <div class="pc-bd">Applied IATA Airline Marketing framework to create a complete marketing plan and bid presentation for outstation lounge space acquisition. Received VP "ThankQ" commendation note for strategic quality of the work.<div class="pc-r">VP ThankQ Commendation</div></div>
+    </div>
+    <div class="pc rev d1">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#F87171;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2)">Safety Leadership</div><div class="pc-t">Proactive Safety SOP — Published</div></div></div>
+      <div class="pc-bd">Identified damaged keyboard wiring constituting an electrical hazard during daily operational checks at QA2. Independently created a formal SOP, reported through proper channels — SOP published and distributed lounge-wide.<div class="pc-r">SOP Published · Hazard Prevented</div></div>
+    </div>
+    <div class="pc rev d2">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#93C5FD;background:rgba(147,197,253,.08);border:1px solid rgba(147,197,253,.2)">Innovation</div><div class="pc-t">Digital Literacy Course — Full Approval</div></div></div>
+      <div class="pc-bd">Self-initiated and conceptualized a Digital Literacy course for new joiners and existing staff, focusing on practical digital tools used in daily lounge operations. Received full team and management approval.<div class="pc-r">Full Management Approval · Operational Upskilling</div></div>
+    </div>
+    <div class="pc rev d3">
+      <div class="pc-hd"><div><div class="pc-badge" style="color:#A78BFA;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2)">Digital Infrastructure</div><div class="pc-t">Digital Kiosk Lounge Mapping</div></div></div>
+      <div class="pc-bd">Mapped optimal locations and created strategy presentation for digital newspaper kiosk system across all Doha lounges — replacing physical reading materials with scannable digital access points.<div class="pc-r">All HIA Lounges Mapped · Digital CX Upgrade</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div id="certifications" class="sw alt2">
+  <p class="stag rev">Credentials</p>
+  <h2 class="sh2 rev d1">Certifications & <em>Accreditations</em></h2>
+  <div class="cert-grid" style="margin-top:8px">
+    <div class="cer rev"><div class="cer-i">IATA Training</div><div class="cer-n">Diploma in Airline Marketing</div></div>
+    <div class="cer rev d1"><div class="cer-i">Google Skillshop</div><div class="cer-n">Google Ads Search Certification</div></div>
+    <div class="cer rev d2"><div class="cer-i">Google Digital Garage</div><div class="cer-n">Fundamentals of Digital Marketing</div></div>
+    <div class="cer rev d3"><div class="cer-i">Max Business School</div><div class="cer-n">Master Course in Digital Marketing & Business</div></div>
+    <div class="cer rev"><div class="cer-i">HubSpot Academy</div><div class="cer-n">Social Media Marketing Certification</div></div>
+    <div class="cer rev d1"><div class="cer-i">LinkedIn Learning</div><div class="cer-n">LinkedIn Marketing Solutions Fundamentals</div></div>
+    <div class="cer rev d2"><div class="cer-i">upGrad</div><div class="cer-n">Introduction to Data Analysis using Excel</div></div>
+    <div class="cer rev d3"><div class="cer-i">Alison</div><div class="cer-n">Mastering Data Analysis — Excel Formulas & Pivot Tables</div></div>
+    <div class="cer rev"><div class="cer-i">UMT</div><div class="cer-n">Airside Operations, ATM & Red Bird Flight Simulator</div></div>
+    <div class="cer rev d1"><div class="cer-i">UMT</div><div class="cer-n">Aircraft Weight & Balance</div></div>
+    <div class="cer rev d2"><div class="cer-i">MBRU</div><div class="cer-n">COVID-19 Infection Prevention & Control</div></div>
+    <div class="cer rev d3"><div class="cer-i">LinkedIn Learning</div><div class="cer-n">Customer Experience Leadership Series</div></div>
+    <div class="cer rev"><div class="cer-i">DigiSkills.pk</div><div class="cer-n">Digital Marketing & Freelancing</div></div>
+    <div class="cer rev d1"><div class="cer-i">Salesforce</div><div class="cer-n">Salesforce Social Studio (Radian6)</div></div>
+    <div class="cer rev d2"><div class="cer-i">Harvard Business Publishing</div><div class="cer-n">SPARK Continuous Learning · Qatar Airways</div></div>
+    <div class="cer rev d3"><div class="cer-i">DigiSkills.pk</div><div class="cer-n">Communication and Soft Skills</div></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div id="testimonials" class="sw alt">
+  <p class="stag rev">Social Proof</p>
+  <h2 class="sh2 rev d1">What Clients & <em>Colleagues Say</em></h2>
+  <p class="ssub rev d2">Feedback from aviation leaders, marketing clients, and industry partners.</p>
+  <div class="test-g" id="tg"></div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="sw">
+  <div class="cg">
+    <div>
+      <p class="stag rev">Get in Touch</p>
+      <h2 class="rev d1" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;color:var(--white);line-height:1.15;margin-bottom:14px">Let's Build<br><em style="font-style:italic;color:var(--gold)">Something Great.</em></h2>
+      <p class="rev d2" style="font-size:.88rem;line-height:1.8;color:var(--g2);margin-bottom:24px">Open to digital marketing projects, aviation roles, and strategic partnerships. Willing to cover all relocation and visa sponsorship expenses.</p>
+      <div class="cl-links rev d3">
+        <a href="mailto:moinraza496@gmail.com" class="cl-link"><div class="cl-ico"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>moinraza496@gmail.com</a>
+        <a href="tel:+97433588448" class="cl-link"><div class="cl-ico"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>+974 3358 8448 · Doha, Qatar</a>
+        <a href="https://www.linkedin.com/in/moinraza496/" target="_blank" class="cl-link"><div class="cl-ico"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></div>linkedin.com/in/moinraza496</a>
+        <a href="https://marketusmarshal.com" target="_blank" class="cl-link"><div class="cl-ico"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>marketusmarshal.com</a>
+      </div>
+    </div>
+    <div>
+      <form class="cf rev d2" id="cf">
+        <div class="fr">
+          <div class="fi"><label>Name</label><input type="text" placeholder="Your name" required/></div>
+          <div class="fi"><label>Email</label><input type="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="fi"><label>Subject</label><input type="text" placeholder="How can I help?"/></div>
+        <div class="fi"><label>Message</label><textarea rows="4" placeholder="Tell me about your goals..." required></textarea></div>
+        <button type="submit" class="f-sub">Send Message <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg></button>
+        <div class="f-ok" id="fok">Message received — I'll respond within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fl">M.<span>Moin Raza</span></div>
+  <div class="fc">© 2026 Muhammad Moin Raza · All Rights Reserved</div>
+  <div class="ft">Willing to cover all relocation & visa sponsorship expenses</div>
+</footer>
+
+<script>
+// CURSOR
+const cd=document.getElementById("cd"),cr=document.getElementById("cr");
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+"px";cd.style.top=my+"px"});
+(function L(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+"px";cr.style.top=ry+"px";requestAnimationFrame(L)})();
+document.querySelectorAll("a,button,.pc,.dsh,.sk,.cer,.tc,.am,.ct").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{cd.classList.add("h");cr.classList.add("h")});
+  el.addEventListener("mouseleave",()=>{cd.classList.remove("h");cr.classList.remove("h")});
+});
+
+// NAV SCROLL
+const nav=document.getElementById("nav");
+window.addEventListener("scroll",()=>nav.classList.toggle("s",scrollY>50));
+
+// MOBILE MENU
+const mob=document.getElementById("mob-menu");
+document.getElementById("hbg").addEventListener("click",()=>mob.classList.toggle("open"));
+document.getElementById("mob-close").addEventListener("click",()=>mob.classList.remove("open"));
+document.querySelectorAll(".mob-a").forEach(a=>a.addEventListener("click",()=>mob.classList.remove("open")));
+
+// REVEAL
+const rObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("v")}),{threshold:.1});
+document.querySelectorAll(".rev,.rl").forEach(el=>rObs.observe(el));
+
+// SKILL BARS
+const sObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll(".sk-bar").forEach(b=>b.style.width=b.dataset.w+"%")}),{threshold:.3});
+document.querySelectorAll(".sk").forEach(s=>sObs.observe(s));
+
+// ROAS BARS
+const dObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll(".roas-fill").forEach(b=>b.style.width=b.dataset.w+"%")}),{threshold:.2});
+document.querySelectorAll(".dsh").forEach(d=>dObs.observe(d));
+
+// COUNTERS
+function cnt(el){const t=+el.dataset.t;let n=0;(function s(){n+=Math.ceil(t/55);if(n>=t){el.textContent=t;return}el.textContent=n;requestAnimationFrame(s)})()}
+const cObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll(".cv").forEach(cnt);cObs.unobserve(x.target)}}),{threshold:.25});
+document.querySelectorAll(".h-stats,.a-metrics").forEach(s=>cObs.observe(s));
+
+// TABS
+document.querySelectorAll(".ptab").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".ptab").forEach(x=>x.classList.remove("a"));
+    document.querySelectorAll(".pp").forEach(x=>x.classList.remove("a"));
+    b.classList.add("a");
+    const panel=document.getElementById("ptab-"+b.dataset.tab);
+    panel.classList.add("a");
+    panel.querySelectorAll(".rev").forEach(el=>{el.classList.remove("v");setTimeout(()=>rObs.observe(el),50)});
+  });
+});
+
+// CONTACT FORM
+document.getElementById("cf").addEventListener("submit",async function(e){
+  e.preventDefault();
+
+  const formData = {
+    name: e.target[0].value,
+    email: e.target[1].value,
+    subject: e.target[2].value,
+    message: e.target[3].value,
+    created_at: new Date().toISOString()
+  };
+
+  try {
+    const response = await fetch('https://agrjdfsytfysyiwejcdr.supabase.co/rest/v1/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFncmpkZnN5dGZ5c3lpd2VqY2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNTk0MjYsImV4cCI6MjA4ODgzNTQyNn0.sXxOt9fGl1v1iH2nxevqqp43cos66_vCf_1mVmJJYMs',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFncmpkZnN5dGZ5c3lpd2VqY2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNTk0MjYsImV4cCI6MjA4ODgzNTQyNn0.sXxOt9fGl1v1iH2nxevqqp43cos66_vCf_1mVmJJYMs',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      this.reset();
+      const ok=document.getElementById("fok");ok.style.display="block";
+      setTimeout(()=>ok.style.display="none",5000);
+    } else {
+      alert('Failed to send message. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
+});
+
+// TESTIMONIALS
+const revs=[
+  {q:"Moin's ability to take a project from concept to completion was instrumental in our move toward a paperless system. His QMATE prototype exceeded our expectations.",a:"Lounge Management",r:"Qatar Airways",i:"QA",c:"#C9A356"},
+  {q:"He scaled our ROAS to 290% within three months. His Meta ads strategy completely revitalized our e-commerce pipeline.",a:"E-commerce Founder",r:"Confidential Client",i:"EF",c:"#34D399"},
+  {q:"An incredible eye for detail. Moin's work on SOP standardizations and safety documentation was thorough and highly professional.",a:"Aviation Safety Officer",r:"Aviation Sector",i:"AS",c:"#818CF8"},
+  {q:"The lead generation campaigns he ran brought highly qualified buyers at a fraction of our previous cost per lead.",a:"Real Estate Director",r:"Legacy Real Estate",i:"RE",c:"#2DD4BF"},
+  {q:"His knowledge of aviation operations combined with tech-savviness makes him a rare asset in any team.",a:"Flight Training Instructor",r:"Aviation Academy",i:"FI",c:"#C9A356"},
+  {q:"His B2B LinkedIn strategies opened doors we couldn't get past. A true digital strategist who understands complex sales cycles.",a:"SaaS Startup CEO",r:"Tech Industry",i:"SC",c:"#93C5FD"},
+  {q:"Moin's dedication to the 5-star passenger experience is unmatched. He handles high-pressure situations with absolute grace.",a:"Customer Experience Head",r:"Qatar Airways",i:"CX",c:"#34D399"},
+  {q:"The frontline video published on QHUB was incredibly motivating — the team loved seeing themselves represented so professionally.",a:"Training Manager",r:"Qatar Airways",i:"TM",c:"#818CF8"},
+  {q:"His deep understanding of both travel and digital ads helped our agency lower booking CPA by 40%. Exceptional work.",a:"Travel Agency Owner",r:"Tourism Sector",i:"TO",c:"#C9A356"},
+  {q:"Moin's analytics dashboards gave us real-time insights we needed to dramatically improve team performance.",a:"Project Manager",r:"Qatar Airways",i:"PM",c:"#2DD4BF"},
+  {q:"Working with Moin felt like having a senior strategist and dedicated account manager in one. Exceptional communicator.",a:"Agency Partner",r:"Digital Agency",i:"AP",c:"#93C5FD"},
+  {q:"The UGC campaign design was spot on — 10% engagement jump and 300+ organic submissions almost immediately.",a:"Brand Manager",r:"Retail Brand",i:"BM",c:"#34D399"},
+];
+const tg=document.getElementById("tg");
+revs.forEach((r,i)=>{
+  const d=(i%4)*70;
+  tg.innerHTML+=`<div class="tc rev" style="transition-delay:${d}ms"><p class="tc-q">"${r.q}"</p><div class="tc-aut"><div class="tc-av" style="background:${r.c}15;color:${r.c};border:1px solid ${r.c}25">${r.i}</div><div><div class="tc-n">${r.a}</div><div class="tc-r">${r.r}</div></div></div></div>`;
+});
+document.querySelectorAll(".tc").forEach(el=>rObs.observe(el));
+</script>
+</body>
+</html>
